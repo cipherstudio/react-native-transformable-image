@@ -5,7 +5,7 @@ import { Image } from 'react-native';
 
 import ViewTransformer from 'react-native-view-transformer';
 import PropTypes from 'prop-types';
-const CachedImage = require('react-native-cached-image');
+import {CachedImage} from 'react-native-cached-image';
 
 let DEV = false;
 
