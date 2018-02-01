@@ -25,13 +25,15 @@ export default class TransformableImage extends Component {
     enableTranslate: PropTypes.bool,
     onSingleTapConfirmed: PropTypes.func,
     onTransformGestureReleased: PropTypes.func,
-    onViewTransformed: PropTypes.func
+    onViewTransformed: PropTypes.func,
+    resizeMode: PropTypes.string
   };
 
   static defaultProps = {
     enableTransform: true,
     enableScale: true,
-    enableTranslate: true
+    enableTranslate: true,
+    resizeMode: 'cover'
   };
 
   constructor(props) {
@@ -103,7 +105,6 @@ export default class TransformableImage extends Component {
         <Image
           {...this.props}
           style={[this.props.style, {backgroundColor: 'transparent'}]}
-          resizeMode={'contain'}
           onLoadStart={this.onLoadStart.bind(this)}
           onLoad={this.onLoad.bind(this)}
           capInsets={{left: 0.1, top: 0.1, right: 0.1, bottom: 0.1}} //on iOS, use capInsets to avoid image downsampling
