@@ -25,15 +25,13 @@ export default class TransformableImage extends Component {
     enableTranslate: PropTypes.bool,
     onSingleTapConfirmed: PropTypes.func,
     onTransformGestureReleased: PropTypes.func,
-    onViewTransformed: PropTypes.func,
-    resizeMode: PropTypes.string
+    onViewTransformed: PropTypes.func
   };
 
   static defaultProps = {
     enableTransform: true,
     enableScale: true,
-    enableTranslate: true,
-    resizeMode: 'cover'
+    enableTranslate: true
   };
 
   constructor(props) {
